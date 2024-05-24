@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMouse - Современные компьютерные мыши для любых задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>TechMouse</h1>
+        <p>Современные компьютерные мыши для любых задач</p>
+    </header>
+    <main>
+        <h2>Найдите идеальную компьютерную мышь!</h2>
+        <div class="filters">
+            <label for="priceRange">Цена: <span id="priceValue">50000</span> рублей</label>
+            <input type="range" id="priceRange" min="10000" max="100000" value="50000" step="5000" oninput="updatePriceValue()">
+            <button onclick="filterProducts('favorite')">Показать избранное</button>
+            <button onclick="filterProducts('new')">Показать Новинки</button>
+            <button onclick="filterProducts('all')">Показать всё</button>
+        </div>
+        <div class="product-gallery">
+            <div class="product" data-price="50000" data-favorite="false" data-new="true">
+                <img src="mouse1.jpg" alt="Мышь 1">
+                <h3>Razer Orochi V2</h3>
+                <p>Ультралегкая беспроводная игровая мышь</p>
+                <p>Цена: 4999 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="40000" data-favorite="false" data-new="false">
+                <img src="mouse2.jpg" alt="Мышь 2">
+                <h3>Razer DeathAdder V3 Pro</h3>
+                <p>Легендарная киберспортивная мышь в сверхлегком обновленном формате.</p>
+                <p>Цена: 11999 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="30000" data-favorite="false" data-new="true">
+                <img src="mouse3.jpg" alt="Мышь 3">
+                <h3>Razer Viper V2 Pro</h3>
+                <p>Киберспортивная мышь с ведущим в отрасли беспроводным подключением Razer™ HyperSpeed</p>
+                <p>Цена: 10999 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="60000" data-favorite="false" data-new="false">
+                <img src="mouse4.jpg" alt="Мышь 4">
+                <h3>Razer Basilisk V3 Pro</h3>
+                <p>Беспроводная игровая мышь эргономичной формы с оптическим сенсором Razer Focus Pro 30K DPI</p>
+                <p>Цена: 13999 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="70000" data-favorite="false" data-new="true">
+                <img src="mouse5.jpg" alt="Мышь 5">
+                <h3>Razer Basilisk V3 X HyperSpeed</h3>
+                <p>Эргономичная игровая мышь с беспроводным подключением.</p>
+                <p>Цена: 6499 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="20000" data-favorite="false" data-new="false">
+                <img src="mouse6.jpg" alt="Мышь 6">
+                <h3>Razer Cobra Pro</h3>
+                <p>Беспроводная симметричная мышь с форм-фактором для правой руки и легким дизайном весом 77 г.</p>
+                <p>Цена: 20000 рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
